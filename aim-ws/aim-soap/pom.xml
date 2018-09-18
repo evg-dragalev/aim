@@ -12,6 +12,38 @@
 
   <groupId>com.eugened.aim.webservice.soap</groupId>
   <artifactId>aim-soap</artifactId>
+  <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
+
+  <properties>
+    <jaxws-rt.version>2.2.10</jaxws-rt.version>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>com.eugened.aim.webservice.core</groupId>
+      <artifactId>aim-core</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.sun.xml.ws/jaxws-rt -->
+    <dependency>
+      <groupId>com.sun.xml.ws</groupId>
+      <artifactId>jaxws-rt</artifactId>
+      <version>${jaxws-rt.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.enterprise</groupId>
+      <artifactId>cdi-api</artifactId>
+    </dependency>
+
+  </dependencies>
 
 </project>
