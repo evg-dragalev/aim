@@ -6,10 +6,11 @@ import java.util.List;
 
 public interface ActivityDao {
 
-    Activity get(Long id);
+    Activity getById(long id);
 
     void save(Activity activity);
 
     List<Activity> getAll();
 
+    void delete(long id);
 }

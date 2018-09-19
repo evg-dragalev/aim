@@ -4,7 +4,23 @@ import java.util.List;
 
 public class Timetable {
 
-    List<Activity> activities;
+    private List<Activity> activities;
 
-    String comment;
+    private String comment;
+
+    public List<Activity> getActivities() {
+        return activities;
+    }
+
+    public void setActivities(List<Activity> activities) {
+        this.activities = activities;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }

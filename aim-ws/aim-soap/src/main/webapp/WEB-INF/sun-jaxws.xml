@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
 
-  <endpoint name="TimetableWebService" url-pattern="/getActivities"
+  <endpoint name="TimetableWebService" url-pattern="/timetable"
             implementation="com.eugened.aim.ws.soap.service.impl.TimetableWebServiceImpl"/>
+
+  <endpoint name="ActivityWebService" url-pattern="/activity"
+            implementation="com.eugened.aim.ws.soap.service.impl.ActivityWebServiceImpl"/>
+
+  <endpoint name="ArtifactWebService" url-pattern="/artifact"
+            implementation="com.eugened.aim.ws.soap.service.impl.ArtifactWebServiceImpl"/>
 
 </endpoints>

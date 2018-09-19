@@ -1,10 +1,8 @@
 package com.eugened.aim.ws.core.service;
 
-import com.eugened.aim.ws.core.bean.Activity;
-
-import java.util.List;
+import com.eugened.aim.ws.core.bean.Timetable;
 
 public interface TimetableService {
 
-    List<Activity> getActivities();
+    Timetable getTimetable(long timetableId);
 }

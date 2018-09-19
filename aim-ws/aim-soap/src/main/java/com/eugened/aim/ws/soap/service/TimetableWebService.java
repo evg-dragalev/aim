@@ -1,11 +1,10 @@
 package com.eugened.aim.ws.soap.service;
 
-import com.eugened.aim.ws.core.bean.Activity;
+import com.eugened.aim.ws.core.bean.Timetable;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
-import java.util.List;
 
 @WebService(serviceName = "Timetable",
         portName="TimetablePort",
@@ -16,5 +15,5 @@ import java.util.List;
 public interface TimetableWebService {
 
     @WebMethod
-    List<Activity> getActivities();
+    Timetable getTimetable(long id);
 }

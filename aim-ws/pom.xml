@@ -24,6 +24,8 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+    <javax.persistence-api.version>2.2</javax.persistence-api.version>
+    <hibernate.version>5.3.6.Final</hibernate.version>
   </properties>
 
   <dependencyManagement>
@@ -44,6 +46,31 @@
         <version>2.0.SP1</version>
         <scope>provided</scope>
       </dependency>
+
+      <!--&lt;!&ndash; JPA &ndash;&gt;-->
+      <!--&lt;!&ndash; https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api &ndash;&gt;-->
+      <!--<dependency>-->
+        <!--<groupId>javax.persistence</groupId>-->
+        <!--<artifactId>javax.persistence-api</artifactId>-->
+        <!--<version>${javax.persistence-api.version}</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+        <!--<groupId>org.hibernate</groupId>-->
+        <!--<artifactId>hibernate-core</artifactId>-->
+        <!--<version>${hibernate.version}</version>-->
+      <!--</dependency>-->
+      <!--&lt;!&ndash; For connection pooling &ndash;&gt;-->
+      <!--<dependency>-->
+        <!--<groupId>org.hibernate</groupId>-->
+        <!--<artifactId>hibernate-c3p0</artifactId>-->
+        <!--<version>${hibernate.version}</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+        <!--<groupId>com.h2database</groupId>-->
+        <!--<artifactId>h2</artifactId>-->
+        <!--<version>1.4.197</version>-->
+      <!--</dependency>-->
+
 
     </dependencies>
   </dependencyManagement>

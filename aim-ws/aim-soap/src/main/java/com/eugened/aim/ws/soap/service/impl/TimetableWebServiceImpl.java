@@ -1,13 +1,12 @@
 package com.eugened.aim.ws.soap.service.impl;
 
-import com.eugened.aim.ws.core.bean.Activity;
+import com.eugened.aim.ws.core.bean.Timetable;
 import com.eugened.aim.ws.core.service.TimetableService;
 import com.eugened.aim.ws.soap.service.TimetableWebService;
 
 import javax.inject.Inject;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
-import java.util.List;
 
 
 @WebService(endpointInterface = "com.eugened.aim.ws.soap.service.TimetableWebService")
@@ -18,7 +17,7 @@ public class TimetableWebServiceImpl implements TimetableWebService {
 
     @Override
     @WebMethod
-    public List<Activity> getActivities() {
-        return timetableService.getActivities();
+    public Timetable getTimetable(long id) {
+        return timetableService.getTimetable(id);
     }
 }

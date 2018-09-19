@@ -19,21 +19,30 @@ public class DummyActivityDao implements ActivityDao {
         return activities;
     }
 
-    private Activity createActivity(long id, String name, String description){
-        Activity activity = new Activity();
-        activity.setId(id);
-        activity.setName(name);
-        activity.setDescrption(description);
-        return activity;
-    }
-
     @Override
-    public Activity get(Long id) {
-        throw new UnsupportedOperationException("Dummy, not supported");
+    public Activity getById(long id) {
+        return activities.stream()
+                .filter((a) -> id==a.getId())
+                .findAny()
+                .orElseThrow(()->new IllegalArgumentException(String.format("Activity %d not found", id)));
     }
 
     @Override
     public void save(Activity activity) {
-        throw new UnsupportedOperationException("Dummy, not supported");
+        activities.add(activity);
+    }
+
+    public void delete(long id){
+        activities.stream()
+                .filter((a) -> id==a.getId())
+                .forEach((a) -> activities.remove(a));
+    }
+
+    private Activity createActivity(long id, String name, String description){
+        Activity activity = new Activity();
+        activity.setId(id);
+        activity.setName(name);
+        activity.setDescription(description);
+        return activity;
     }
 }

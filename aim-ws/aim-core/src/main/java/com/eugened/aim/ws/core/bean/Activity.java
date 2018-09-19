@@ -28,7 +28,7 @@ public class Activity {
         return descrption;
     }
 
-    public void setDescrption(String descrption) {
+    public void setDescription(String descrption) {
         this.descrption = descrption;
     }
 
