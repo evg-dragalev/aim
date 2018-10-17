@@ -17,19 +17,41 @@
 
   <modules>
     <module>aim-core</module>
-    <module>aim-soap</module>
+    <module>aim-demodb</module>
+    <!--<module>aim-soap</module>-->
+    <module>aim-rest</module>
+    <!--<module>aim-container</module>-->
   </modules>
 
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
     <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+
     <javax.persistence-api.version>2.2</javax.persistence-api.version>
     <hibernate.version>5.3.6.Final</hibernate.version>
+
+    <jaxws-rt.version>2.2.10</jaxws-rt.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+
+      <!-- https://mvnrepository.com/artifact/com.sun.xml.ws/jaxws-rt -->
+      <dependency>
+        <groupId>com.sun.xml.ws</groupId>
+        <artifactId>jaxws-rt</artifactId>
+        <version>${jaxws-rt.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.xml.ws</groupId>
+        <artifactId>jaxws-api</artifactId>
+        <version>${jaxws-rt.version}</version>
+        <scope>provided</scope>
+      </dependency>
+
 
       <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
       <dependency>
@@ -44,32 +66,31 @@
         <groupId>javax.enterprise</groupId>
         <artifactId>cdi-api</artifactId>
         <version>2.0.SP1</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
 
-      <!--&lt;!&ndash; JPA &ndash;&gt;-->
-      <!--&lt;!&ndash; https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api &ndash;&gt;-->
-      <!--<dependency>-->
-        <!--<groupId>javax.persistence</groupId>-->
-        <!--<artifactId>javax.persistence-api</artifactId>-->
-        <!--<version>${javax.persistence-api.version}</version>-->
-      <!--</dependency>-->
-      <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-core</artifactId>-->
-        <!--<version>${hibernate.version}</version>-->
-      <!--</dependency>-->
-      <!--&lt;!&ndash; For connection pooling &ndash;&gt;-->
-      <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-c3p0</artifactId>-->
-        <!--<version>${hibernate.version}</version>-->
-      <!--</dependency>-->
-      <!--<dependency>-->
-        <!--<groupId>com.h2database</groupId>-->
-        <!--<artifactId>h2</artifactId>-->
-        <!--<version>1.4.197</version>-->
-      <!--</dependency>-->
+      <!-- JPA -->
+      <!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
+      <dependency>
+        <groupId>javax.persistence</groupId>
+        <artifactId>javax.persistence-api</artifactId>
+        <version>${javax.persistence-api.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>${hibernate.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-c3p0</artifactId>
+        <version>${hibernate.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <version>1.4.197</version>
+      </dependency>
 
 
     </dependencies>

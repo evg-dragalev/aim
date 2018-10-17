@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.eugened.aim.webservice</groupId>
+    <artifactId>aim-ws</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <groupId>com.eugened.aim.webservice.rest</groupId>
+  <artifactId>aim-rest</artifactId>
+  <packaging>war</packaging>
+
+  <properties>
+    <jaxrs.version>2.1</jaxrs.version>
+    <jersey.version>2.27</jersey.version>
+    <asm.version>3.3.1</asm.version>
+    <!--<json.version>20170516</json.version>-->
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.eugened.aim.webservice.core</groupId>
+      <artifactId>aim-core</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>javax.enterprise</groupId>-->
+      <!--<artifactId>cdi-api</artifactId>-->
+      <!--<scope>provided</scope>-->
+    <!--</dependency>-->
+
+
+    <dependency>
+      <groupId>asm</groupId>
+      <artifactId>asm</artifactId>
+      <version>${asm.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.ws.rs</groupId>
+      <artifactId>javax.ws.rs-api</artifactId>
+      <version>${jaxrs.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.jersey.core</groupId>
+      <artifactId>jersey-common</artifactId>
+      <version>${jersey.version}</version>
+    </dependency>
+    <dependency>
+    <groupId>org.glassfish.jersey.inject</groupId>
+    <artifactId>jersey-cdi2-se</artifactId>
+    <version>${jersey.version}</version>
+  </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.core</groupId>
+      <artifactId>jersey-server</artifactId>
+      <version>${jersey.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-servlet</artifactId>
+      <version>${jersey.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.media</groupId>
+      <artifactId>jersey-media-json-jackson</artifactId>
+      <version>${jersey.version}</version>
+    </dependency>
+
+    <!--<dependency>-->
+    <!--<groupId>org.json</groupId>-->
+    <!--<artifactId>json</artifactId>-->
+    <!--<version>${json.version}</version>-->
+    <!--</dependency>-->
+
+  </dependencies>
+
+</project>

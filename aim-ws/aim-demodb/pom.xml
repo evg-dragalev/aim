@@ -1,32 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>aim-ws</artifactId>
+    <groupId>com.eugened.aim.webservice</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.eugened.aim.webservice</groupId>
-    <artifactId>aim-ws</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
-  </parent>
-
-  <groupId>com.eugened.aim.webservice.core</groupId>
-  <artifactId>aim-core</artifactId>
-  <packaging>jar</packaging>
+  <groupId>com.eugened.aim.webservice.demodb</groupId>
+  <artifactId>aim-demodb</artifactId>
 
   <dependencies>
-
-    <dependency>
-      <groupId>com.eugened.aim.webservice.demodb</groupId>
-      <artifactId>aim-demodb</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-
-    <dependency>
-      <groupId>javax.enterprise</groupId>
-      <artifactId>cdi-api</artifactId>
-    </dependency>
-
+    <!-- JPA -->
+    <!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
     <dependency>
       <groupId>javax.persistence</groupId>
       <artifactId>javax.persistence-api</artifactId>
@@ -35,11 +23,10 @@
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
     </dependency>
-
+    <!-- For connection pooling -->
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
     </dependency>
   </dependencies>
-
 </project>
