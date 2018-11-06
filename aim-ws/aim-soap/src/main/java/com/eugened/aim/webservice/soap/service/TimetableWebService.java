@@ -1,6 +1,6 @@
-package com.eugened.aim.ws.soap.service;
+package com.eugened.aim.webservice.soap.service;
 
-import com.eugened.aim.ws.core.bean.Timetable;
+import com.eugened.aim.webservice.core.bean.Timetable;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;

@@ -1,14 +1,16 @@
-package com.eugened.aim.ws.soap.service.impl;
+package com.eugened.aim.webservice.soap.service.impl;
 
-import com.eugened.aim.ws.core.bean.Artifact;
-import com.eugened.aim.ws.core.service.ArtifactService;
-import com.eugened.aim.ws.soap.service.ArtifactWebService;
+import com.eugened.aim.webservice.core.bean.Artifact;
+import com.eugened.aim.webservice.core.service.ArtifactService;
+import com.eugened.aim.webservice.soap.service.ArtifactWebService;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.jws.WebService;
 import java.util.List;
 
-@WebService(endpointInterface = "com.eugened.aim.ws.soap.service.ArtifactWebService")
+@WebService(endpointInterface = "com.eugened.aim.webservice.soap.service.ArtifactWebService")
+@ApplicationScoped
 public class ArtifactWebServiceImpl implements ArtifactWebService {
 
     @Inject

@@ -1,14 +1,16 @@
-package com.eugened.aim.ws.soap.service.impl;
+package com.eugened.aim.webservice.soap.service.impl;
 
-import com.eugened.aim.ws.core.bean.Activity;
-import com.eugened.aim.ws.core.service.ActivityService;
-import com.eugened.aim.ws.soap.service.ActivityWebService;
+import com.eugened.aim.webservice.core.bean.Activity;
+import com.eugened.aim.webservice.core.service.ActivityService;
+import com.eugened.aim.webservice.soap.service.ActivityWebService;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.jws.WebService;
-import java.util.List;
+import java.util.Set;
 
-@WebService(endpointInterface = "com.eugened.aim.ws.soap.service.ActivityWebService")
+@WebService(endpointInterface = "com.eugened.aim.webservice.soap.service.ActivityWebService")
+@ApplicationScoped
 public class ActivityWebServiceImpl implements ActivityWebService {
 
     @Inject
@@ -30,7 +32,7 @@ public class ActivityWebServiceImpl implements ActivityWebService {
     }
 
     @Override
-    public List<Activity> getActivities() {
+    public Set<Activity> getActivities() {
         return activityService.getAll();
     }
 }

@@ -1,11 +1,11 @@
-package com.eugened.aim.ws.soap.service;
+package com.eugened.aim.webservice.soap.service;
 
-import com.eugened.aim.ws.core.bean.Activity;
+import com.eugened.aim.webservice.core.bean.Activity;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
-import java.util.List;
+import java.util.Set;
 
 
 @WebService(serviceName = "Activity",
@@ -26,5 +26,5 @@ public interface ActivityWebService {
     void saveActivity(Activity activity);
 
     @WebMethod
-    List<Activity> getActivities();
+    Set<Activity> getActivities();
 }
